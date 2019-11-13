@@ -1,6 +1,8 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseFunc {
@@ -18,6 +20,14 @@ public class BaseFunc {
             url = "http://" + url;
         }
         driver.get(url);
+    }
+
+    public void click(By locator) {
+        getElement(locator).click();
+    }
+
+    public WebElement getElement (By locator) {
+        return driver.findElement(locator);
     }
 
     public void close() {
