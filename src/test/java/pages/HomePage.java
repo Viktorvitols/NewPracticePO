@@ -15,5 +15,4 @@ public class HomePage {
     public void openWomenPage () {
         baseFunc.click(WOMEN);
     }
-
 }
